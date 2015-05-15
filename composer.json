@@ -1,0 +1,26 @@
+{
+    "name": "jelix/tcpdf-module",
+    "type": "jelix-module",
+    "description": "module for Jelix, providing a Response object and a class, to generate a PDF and sent it to a browser, using TCPDF.",
+    "keywords": ["tcpdf", "pdf"],
+    "homepage": "http://jelix.org",
+    "license": "LGPL-2.1",
+    "authors": [
+        {
+            "name": "Laurent Jouanneau",
+            "email": "laurent@jelix.org"
+        }
+    ],
+    "require": {
+        "jelix": "dev-jelix-1.7.x",
+        "tecnick.com/tcpdf": "6.0.*"
+    },
+    "minimum-stability": "dev",
+    "extra" : {
+        "jelix" : {
+            "modules": [
+                "jtcpdf"
+            ]
+        }
+    }
+}
