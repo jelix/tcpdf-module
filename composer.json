@@ -12,7 +12,7 @@
         }
     ],
     "require": {
-        "jelix": "dev-jelix-1.7.x",
+        "jelix/jelix": "dev-jelix-1.7.x",
         "tecnick.com/tcpdf": "6.0.*"
     },
     "minimum-stability": "dev",
