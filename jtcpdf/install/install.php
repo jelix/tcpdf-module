@@ -4,16 +4,16 @@
 * @subpackage  jtcpdf module
 * @author      Laurent Jouanneau
 * @contributor
-* @copyright   2009-2012 Laurent Jouanneau
+* @copyright   2009-2017 Laurent Jouanneau
 * @link        http://www.jelix.org
 * @licence     GNU Lesser General Public Licence see LICENCE file or http://www.gnu.org/licenses/lgpl.html
 */
 
 
-class jtcpdfModuleInstaller extends jInstallerModule {
+class jtcpdfModuleInstaller extends jInstallerModule2 {
 
-    function install() {
-        $this->entryPoint->getMainConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "responses");
-        $this->entryPoint->getMainConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "_coreResponses");
+    function installEntrypoint(jInstallerEntryPoint2 $entryPoint) {
+        $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "responses");
+        $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "_coreResponses");
     }
 }
