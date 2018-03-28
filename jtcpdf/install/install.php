@@ -13,7 +13,11 @@
 class jtcpdfModuleInstaller extends jInstallerModule2 {
 
     function installEntrypoint(jInstallerEntryPoint2 $entryPoint) {
-        $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "responses");
-        $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "_coreResponses");
+        if (! $this->getConfigIni()->getValue('tcpdf', "responses")) {
+            $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "responses");
+        }
+        if (!$this->getConfigIni()->getValue('tcpdf', "_coreResponses")) {
+            $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "_coreResponses");
+        }
     }
 }
