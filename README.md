@@ -17,11 +17,19 @@ In your project:
 composer require "jelix/tcpdf-module"
 ```
 
-And then:
 
+Launch the configurator for your application to enable the module
+
+```bash
+php yourapp/cmd.php module:configure jtcpdf
 ```
-php yourapp/cmd.php install
+
+And then launch the installer to activate the module
+
+```bash
+php yourapp/install/installer.php
 ```
+
 
 Using the module
 ================
