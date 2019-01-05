@@ -8,13 +8,12 @@
 
 class jtcpdfModuleConfigurator extends \Jelix\Installer\Module\Configurator {
 
-
-    public function configure() {
-        if (! $this->getConfigIni()->getValue('tcpdf', "responses")) {
-            $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "responses");
+    public function configure(\Jelix\Installer\Module\API\ConfigurationHelpers $helpers) {
+        if (! $helpers->getConfigIni()->getValue('tcpdf', "responses")) {
+            $helpers->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "responses");
         }
-        if (!$this->getConfigIni()->getValue('tcpdf', "_coreResponses")) {
-            $this->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "_coreResponses");
+        if (!$helpers->getConfigIni()->getValue('tcpdf', "_coreResponses")) {
+            $helpers->getConfigIni()->setValue('tcpdf', "jtcpdf~jResponseTcpdf", "_coreResponses");
         }
     }
 

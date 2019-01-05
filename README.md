@@ -21,7 +21,7 @@ composer require "jelix/tcpdf-module"
 Launch the configurator for your application to enable the module
 
 ```bash
-php yourapp/cmd.php module:configure jtcpdf
+php yourapp/dev.php module:configure jtcpdf
 ```
 
 And then launch the installer to activate the module
