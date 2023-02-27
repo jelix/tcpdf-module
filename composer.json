@@ -14,15 +14,19 @@
     "require": {
         "tecnickcom/tcpdf": "^6.6.0"
     },
-    "conflict": {
-        "jelix/jelix": "<1.7.0-beta.5"
-    },
     "minimum-stability": "stable",
     "extra" : {
         "jelix" : {
             "modules": [
                 "jtcpdf"
-            ]
+            ],
+            "autoconfig-access-16" : {
+              "lizmap@3liz.com" : {
+                "jtcpdf": {
+                  "__global": 1
+                }
+              }
+            }
         },
         "branch-alias": {
             "dev-master": "1.7.x-dev"
